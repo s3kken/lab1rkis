@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+<div>
+    <h3>Delete user {{ user.username }}</h3>
+    <p>Do you really want to delete your account?</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Yes, delete!">
+    </form>
+</div>
+
+{% endblock %}
